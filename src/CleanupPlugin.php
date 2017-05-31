@@ -8,7 +8,7 @@ use Composer\IO\IOInterface;
 use Composer\Plugin\PluginInterface;
 use Composer\Script\ScriptEvents;
 use Composer\Installer\PackageEvent;
-use Composer\Script\CommandEvent;
+use Composer\Plugin\CommandEvent;
 use Composer\Util\Filesystem;
 use Composer\Package\BasePackage;
 
@@ -129,9 +129,10 @@ class CleanupPlugin implements PluginInterface, EventSubscriberInterface
         foreach((array) $rules as $part) {
             // Split patterns for single globs (should be max 260 chars)
             $patterns = explode(' ', trim($part));
-            
+
             foreach ($patterns as $pattern) {
                 try {
+                    // $this->io->write("Removing {$dir}/{$pattern}");
                     foreach (glob($dir.'/'.$pattern) as $file) {
                         $this->filesystem->remove($file);
                     }
