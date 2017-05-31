@@ -91,6 +91,17 @@ class CleanupRules
             'twig/twig'                             => array($docs, $tests),
             'venturecraft/revisionable'             => array($docs, $tests),
             'willdurand/geocoder'                   => array($docs, $tests),
+
+            // Others
+            'psy/psysh'                             => array($docs, $tests),
+            'mtdowling/cron-expression'             => array($docs, $tests),
+
+            'jakub-onderka/php-console-color'       => array($docs, $tests),
+            'jakub-onderka/php-console-highlighter' => array($docs, $tests),
+            'dnoegel/php-xdg-base-dir'              => array($docs, $tests),
+
+            'adldap2/adldap2-laravel'               => array($docs, $tests),
+            'watson/active'                         => array($docs, $tests),
         );
     }
 
