@@ -132,7 +132,9 @@ class CleanupPlugin implements PluginInterface, EventSubscriberInterface
 
             foreach ($patterns as $pattern) {
                 try {
-                    // $this->io->write("Removing {$dir}/{$pattern}");
+                    if (getenv('COMPOSER_DEBUG')) {
+                        $this->io->write("Removing {$dir}/{$pattern}");
+                    }
                     foreach (glob($dir.'/'.$pattern) as $file) {
                         $this->filesystem->remove($file);
                     }
