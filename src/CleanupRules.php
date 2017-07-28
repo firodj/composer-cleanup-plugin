@@ -65,6 +65,7 @@ class CleanupRules
             'doctrine/common'                       => array($docs, $tests, 'bin lib/vendor'),
             'doctrine/dbal'                         => array($docs, $tests, 'bin build* docs2 lib/vendor'),
             'doctrine/inflector'                    => array($docs, $tests),
+            'doctrine/instantiator'                 => array($docs, $tests),
             'dompdf/dompdf'                         => array($docs, $tests, 'www'),
             'guzzle/guzzle'                         => array($docs, $tests),
             'guzzlehttp/guzzle'                     => array($docs, $tests),
